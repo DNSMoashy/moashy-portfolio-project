@@ -1,0 +1,413 @@
+/* Site Stylesheet
+General Selectors
+  1. Header Content
+  2. Body-Mission
+  3. Tea Of The Month
+  4. 
+  5. 
+  6. 
+color ideas: 
+#F2A29B pink light
+#D95964 coral dark
+#195942 green
+#F2EBDF off white
+#ffdc7c yeller
+#6ba292 light teal
+497266 dark teal
+======================================== */
+
+/*General Selectors*/
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+/* body {
+  background-color: #F2EBDF;
+  color: #195942;
+  font-family: Helvetica, sans-serif;
+  font-size: 22px;
+  opacity: .9;
+  margin-top: 0%;
+  overflow: hidden;
+
+} */
+
+
+/* Evans stupid bitch ass code */
+body {
+  height: 100vh;
+  max-width: 100vw;
+
+  /* display: grid;
+  grid-template-rows: 100px 1fr 50px; */
+  /* from index.css */
+  background-color: #F2EBDF;
+  color: #497266;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  max-width: 100vw;
+}
+
+.banner {
+  background-color: #F2A29B;
+  display: flex;
+  justify-content: space-between;
+  max-width: 100vw;
+}
+
+#animated-logo {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  /* display: flex;
+  align-items: center; */
+  width: 15%;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4%;
+}
+
+nav ul li {
+  display: inline;
+  padding: 1%;
+}
+
+/* Main Area */
+
+.main-section {
+  height: 100%;
+  display: grid;
+  grid-template: auto 1fr/ 1fr 2fr .75fr;
+  padding-left: 3%;
+}
+
+#side-bar {
+  grid-area: 1/ 3/ 3/ 3;
+  /* padding-left: 3%; */
+  display: flex;
+  justify-content: end;
+}
+
+.skills {
+  color: #6ba292;
+  background-color: #ffdc7c;
+  height: 100%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+/* about */
+
+#about-container {
+  grid-area: 1/ 1/ 2/ 3;
+  padding-top: 30px;
+  min-height: 420px;
+  max-height: 500px;
+  /* display: grid;
+  grid-template-columns: 1fr 3fr; */
+  display: flex;
+}
+
+#about {
+  color: #F2A29B;
+  background-color: #D95964;
+  height: 100%;
+  width: 100%;
+  /* text-align: center; */
+  /* width: 80%; */
+}
+
+#about-me {
+  height: 100%;
+  padding: 8%;
+  text-align: center;
+}
+
+#profile-photo {
+  /* grid-area: 1/ 1/ 2/ 1; */
+  background-color: #195942;
+  margin: 0;
+  /* padding: 30px 0 0; */
+  /* display: flex;
+  justify-content: end; */
+}
+
+figure img {
+  height: 100%;
+  width: 100%;
+  background-color: #F2A29B;
+}
+
+/* PROJECT */
+
+.project-box {
+  grid-area: 2/ 1/ 2/ 3;
+  padding: 3% 0;
+  max-height: 350px;
+}
+
+.p-b-container {
+  text-align: center;
+  background-color: #D95964;
+  height: 100%;
+  overflow: scroll;
+}
+
+.p-b-container h2 {
+  padding-top: 12px;
+}
+
+.p-g-c {
+  padding: 10px;
+  display: grid;
+  grid-template: minmax(40px, auto) minmax(40px, auto)/ 1fr 1fr;
+  grid-auto-rows: 1fr;
+  gap: 3%;
+}
+
+.project {
+  /* background-color: #195942; */
+  height: 100%;
+  /* width: 100px; */
+  display: flex;
+}
+
+.img {
+  height: 100%;
+  width: 35%;
+  background-color: #F2A29B;
+}
+
+.project-words {
+  text-align: center;
+  color: #497266;
+  background-color: #ffdc7c;
+  width: 100%;
+}
+
+/* Footer */
+
+footer {
+  background-color: #F2A29B;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+footer p {
+  padding-right: 4%;
+}
+
+
+/* MEDIA QUERY */
+
+@media screen and (min-width: 2500px) {
+  * {
+    font-size: 1.2rem;
+  }
+
+  .project-box {
+    max-height: 1000px;
+  }
+
+  .p-b-container h2 {
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+
+  .p-g-c {
+    gap: 10%;
+  }
+
+  .project {
+    min-height: 300px;
+    max-height: 400px;
+  }
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1439px) {
+  nav {
+    width: 30%;
+    padding: 0 1%;
+  }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0%;
+  }
+}
+
+
+@media screen and (max-width: 768px) and (min-width: 426px) {
+
+  * {
+    max-width: 768px;
+  }
+
+  nav {
+    width: 50%;
+    padding: 0 1%;
+  }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0%;
+  }
+
+  nav ul li {
+    display: inline;
+    padding: 0%;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    max-width: 100vw;
+  }
+
+  .main-section {
+    height: 100%;
+    width: 100vw;
+    display: grid;
+    grid-template: auto 1fr 1fr/ 1fr;
+    padding: 0 3%;
+    grid-auto-rows: 1fr;
+  }
+
+  #about-container {
+    /* background-color: #195942; */
+    height: 100%;
+    /* width: 100px; */
+    /* flex-direction: column; */
+  }
+
+  figure img {
+    height: 100%;
+    width: 100%;
+    background-color: #F2A29B;
+  }
+
+  #side-bar {
+    grid-area: 3/ 1/ 3/ 3;
+    padding-left: 0%;
+    display: flex;
+    /* justify-content: end; */
+  }
+
+  .skills {
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 425px) and (min-width: 320px) {
+
+  * {
+    max-width: 425px;
+    font-size: .99em;
+  }
+
+  /* h1 {
+    font-size: medium;
+  } */
+
+  nav {
+    width: 50%;
+    padding: 0 1%;
+  }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0%;
+  }
+
+  nav ul li {
+    display: inline;
+    padding: 0%;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    max-width: 100vw;
+  }
+
+  .main-section {
+    height: 100%;
+    width: 100vw;
+    display: grid;
+    grid-template: auto 1fr/ 1fr;
+    padding: 0 3%;
+    grid-auto-rows: 1fr;
+  }
+
+  #about-container {
+    /* background-color: #195942; */
+    height: 100%;
+    /* width: 100px; */
+    flex-direction: column;
+  }
+
+  #profile-photo {
+    height: 60%;
+  }
+
+
+  .project-box {
+    max-height: 800px;
+  }
+
+  .p-b-container {
+    overflow: visible;
+  }
+
+  .p-g-c {
+    grid-template: minmax(40px, auto) minmax(40px, auto)/ 1fr;
+    grid-auto-rows: 1fr;
+    gap: 3%;
+    padding-bottom: 4%;
+  }
+
+  .project {
+    min-height: 90px;
+    max-height: 200px;
+    margin: 10px;
+  }
+
+  #side-bar {
+    display: none;
+  }
+
+}
